@@ -47,10 +47,17 @@ body {
 
 .gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
   max-width: 1000px;
   margin: auto;
 }
 
 
+.hidden-images {
+  display: none;
+}
+
+.hidden-images.visible {
+  display: block;
+}
