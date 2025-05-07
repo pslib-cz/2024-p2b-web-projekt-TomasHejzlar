@@ -21,6 +21,13 @@ body {
   font-style: normal;
 }
 
+.img-responsive {
+  display: block;
+  width: 100%;
+  height: auto;
+  contain: content;
+  border-radius: 8px;
+}
 
 
 .header{
@@ -37,3 +44,13 @@ body {
   font-size: 40px;
   text-align: center;
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+
