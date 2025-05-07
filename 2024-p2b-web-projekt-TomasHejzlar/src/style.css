@@ -97,23 +97,35 @@ body {
 
 
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  max-width: 1000px;
-  margin: 0.5em;
+/* Galerie pro všechny obrázky (i skryté) */
+.gallery, .hidden-images {
+  display: grid; /* Použijeme grid pro všechny obrázky */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Automatické přizpůsobení podle velikosti */
+  gap: 1rem; /* Mezera mezi obrázky */
+  max-width: 1000px; /* Maximální šířka jako galerie */
+  margin: 0.5em auto; /* Centrované na stránce */
+  width: 100%; /* Zajistí, že galeriím nebudou omezovány šířky */
 }
 
-
+/* Skrytí obrázků, dokud nejsou zobrazené */
 .hidden-images {
-  display: none;
+  display: none; /* Skryté až do zobrazení */
 }
 
+/* Když jsou obrázky zobrazeny, přidáme grid layout */
 .hidden-images.visible {
-  display: grid; /* nebo flex, podle layoutu galerie */
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  display: grid; /* Zobrazíme obrázky ve gridu */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Automatické přizpůsobení podle velikosti */
+  gap: 1rem; /* Mezera mezi obrázky */
+}
+
+
+
+
+.dropdown-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
 }
 
 .dropdown {
@@ -121,6 +133,7 @@ body {
   display: inline-block;
   border: none;
   justify-content: center;
+  text-align: center;
 }
 
 .footer{
