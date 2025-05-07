@@ -1,0 +1,39 @@
+:root {
+  --primary: #ffffff;
+  --secondary: #000000;
+  --button: #6a0dad; 
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.header{
+  height: 200px;
+  background: linear-gradient(to bottom, var(--secondary), var(--primary));
+
+  
+}
+
+.h1 {
+  padding-top: 100px;
+  margin: 0px; /* bez default marginu */
+  color: var(--secondary);
+  font-size: 40px;
+  text-align: center;
+}
