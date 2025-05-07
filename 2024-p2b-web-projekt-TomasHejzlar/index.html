@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New era</title>
+    <title>NewEra</title>
   </head>
   <body>
     <header class="header">
@@ -15,6 +15,39 @@
     </header>
 
     <main>
+
+      <!-- Swiper container -->
+<section id="swiper" class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="/images/canva/landscape.jpg" alt="Obraz 1" class="img-responsive" />
+    </div>
+    <div class="swiper-slide">
+      <img src="/images/canva/animal.jpg" alt="Obraz 2" class="img-responsive" />
+    </div>
+    <div class="swiper-slide">
+      <img src="/images/canva/modern%20art.jpg" alt="Obraz 3" class="img-responsive" />
+    </div>
+    <div class="swiper-slide">
+      <img src="/images/canva/river.jpg" alt="Obraz 4" class="img-responsive" />
+    </div>
+    <div class="swiper-slide">
+      <img src="/images/canva/river2.jpg" alt="Obraz 5" class="img-responsive" />
+    </div>
+    <div class="swiper-slide">
+      <img src="/images/canva/sunset.jpg" alt="Obraz 6" class="img-responsive" />
+    </div>
+  </div>
+
+  
+
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+
+</section>
+
+
+
       <section class="intro">
         <h2 class="h2">Umění se mění</h2>
         <p class="p">
@@ -22,36 +55,60 @@
           🎨 Umění se mění.
           🚀 Neexistují hranice – pouze nekonečné možnosti.
         </p>
-
-        <a href="#" class="button">O modelech</a>
-        <a href="#" class="button">O technologii</a>
+        <div class="buttons">
+          <a href="#" class="button">O modelech</a>
+          <a href="#" class="button">O technologii</a>
+        </div>
       </section>
+
+      
+
 
       <!-- LightGallery -->
-      <section id="gallery" class="gallery">
-        <a href="/images/canva/landscape.jpg">
-          <img src="/images/canva/landscape.jpg" alt="Obraz 1" class="img-responsive" />
-        </a>
-        <a href="/images/canva/animal.jpg">
-          <img src="/images/canva/animal.jpg" alt="Obraz 2" class="img-responsive" />
-        </a>
-        <a href="/images/canva/modern%20art.jpg">
-          <img src="/images/canva/modern%20art.jpg" alt="Obraz 3" class="img-responsive" />
-        </a>
-        <a href="/images/canva/river.jpg">
-          <img src="/images/canva/river.jpg" alt="Obraz 4" class="img-responsive" />
-        </a>
-        <a href="/images/canva/river2.jpg">
-          <img src="/images/canva/river2.jpg" alt="Obraz 5" class="img-responsive" />
-        </a>
-        <a href="/images/canva/sunset.jpg">
-          <img src="/images/canva/sunset.jpg" alt="Obraz 6" class="img-responsive" />
-        </a>
+      <section id="gallerySection" class="gallerySection">
+        <div id="gallery"  class="gallery"> 
+          <a href="/images/canva/landscape.jpg">
+            <img src="/images/canva/landscape.jpg" alt="Obraz 1" class="img-responsive" />
+          </a>
+          <a href="/images/canva/animal.jpg">
+            <img src="/images/canva/animal.jpg" alt="Obraz 2" class="img-responsive" />
+          </a>
+          <a href="/images/canva/modern%20art.jpg">
+            <img src="/images/canva/modern%20art.jpg" alt="Obraz 3" class="img-responsive" />
+          </a>
+          <a href="/images/canva/river.jpg">
+            <img src="/images/canva/river.jpg" alt="Obraz 4" class="img-responsive" />
+          </a>
+          <a href="/images/canva/river2.jpg">
+            <img src="/images/canva/river2.jpg" alt="Obraz 5" class="img-responsive" />
+          </a>
+          <a href="/images/canva/sunset.jpg">
+            <img src="/images/canva/sunset.jpg" alt="Obraz 6" class="img-responsive" />
+          </a>
+
+          <div class="hidden-images">
+            <a href="/images/canva/modern%20art.jpg">
+              <img src="/images/canva/modern%20art.jpg" alt="Obraz 3" class="img-responsive" />
+            </a>
+            <a href="/images/canva/river.jpg">
+              <img src="/images/canva/river.jpg" alt="Obraz 4" class="img-responsive" />
+            </a>
+            <a href="/images/canva/river2.jpg">
+              <img src="/images/canva/river2.jpg" alt="Obraz 5" class="img-responsive" />
+            </a>
+            <a href="/images/canva/sunset.jpg">
+              <img src="/images/canva/sunset.jpg" alt="Obraz 6" class="img-responsive" />
+            </a>
+          </div>
+        </div>
+        <button id="toggleImages" class="dropdown">Zobrazit více</button>
+
       </section>
+      
 
       <footer class="footer">
-        <p class="footer-text">© 2024 Nová éra umění</p>
-        <p class="footer-text">Tomáš Hejzlar</p>
+        <p class="footer-text">© 2024 NewEra</p>
+        <a class="footer-text">Kontakt</a>
       </footer>
 
       <script type="module" src="/src/main.js"></script>

@@ -37,6 +37,19 @@ body {
   
 }
 
+
+.swiper {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
 .h1 {
   padding-top: 100px;
   margin: 0px; /* bez default marginu */
@@ -45,12 +58,51 @@ body {
   text-align: center;
 }
 
+
+.intro{
+  display: block;
+  color: var(--secondary);
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1000px;  /* stejně jako .gallery */
+  margin: 0.5em auto; /* centrování jako galerie */
+}
+
+.button {
+  display: block;
+  width: 30%;
+  background-color: var(--button);
+  color: var(--primary);
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+
+.button:hover {
+  background-color: var(--primary);
+  color: var(--button);
+  border: 2px solid var(--button);
+}
+
+
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
   max-width: 1000px;
-  margin: auto;
+  margin: 0.5em;
 }
 
 
@@ -59,5 +111,63 @@ body {
 }
 
 .hidden-images.visible {
-  display: block;
+  display: grid; /* nebo flex, podle layoutu galerie */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border: none;
+  justify-content: center;
+}
+
+.footer{
+  height: 200px;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary) );
+  display: flex;
+  justify-content: space-around;
+  align-items: center; 
+}
+
+
+
+
+
+
+/* Nastavení Swiper pro zobrazení pouze jednoho obrázku na střed, ale s náhledem dalších */
+.mySwiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Zajišťujeme, že obrázky jsou umístěny v řadě */
+.mySwiper .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.mySwiper {
+  padding: 20px 0;
+}
+
+.mySwiper .swiper-slide {
+  flex-shrink: 0;
+  width: 70%; 
+  opacity: 0.6;
+  transition: opacity 0.4s ease;
+}
+
+.mySwiper .swiper-slide-active {
+  opacity: 1;
+}
+
+.mySwiper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
