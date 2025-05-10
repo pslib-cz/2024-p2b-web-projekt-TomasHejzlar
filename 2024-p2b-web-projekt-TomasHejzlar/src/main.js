@@ -40,3 +40,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+
+
+// Hamburger menu
+  const hamburger = document.getElementById("hamburger");
+  const navbarMenu = document.getElementById("navbarMenu");
+  const overlay = document.getElementById("overlay");
+
+  hamburger.addEventListener("click", () => {
+    navbarMenu.classList.toggle("open");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    navbarMenu.classList.remove("open");
+    overlay.classList.remove("active");
+  });
+
+  document.querySelectorAll(".navbar-right a").forEach(link => {
+    link.addEventListener("click", () => {
+      navbarMenu.classList.remove("open");
+      overlay.classList.remove("active");
+    });
+  });
+
