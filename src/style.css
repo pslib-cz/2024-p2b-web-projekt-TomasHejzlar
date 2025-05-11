@@ -36,7 +36,7 @@ body {
 }
 
 
-
+.text{margin: 20px;}
 
 .swiper {
   width: 100%;
@@ -68,11 +68,32 @@ body {
   margin-bottom: 50px;
 }
 
+.h2{
+  margin: 0;
+  font-size: 30px;
+  color: var(--secondary);
+  text-align: center;
+  position: relative;
+  bottom: 50%;
+}
+
+
+
+
+
+.list-item {
+    margin-bottom: 10px; /* Mezera mezi položkami */
+    font-size: 16px; /* Velikost písma */
+}
+
+
+
 .buttons {
   display: flex;
   justify-content: space-evenly;
   max-width: 1000px;  /* stejně jako .gallery */
   margin: 0.5em auto; /* centrování jako galerie */
+  margin-top: 50px;
 }
 
 .button {
@@ -145,10 +166,17 @@ body {
   align-items: center; 
 }
 
+.footer-text{
+  text-decoration: none;
+  color: var(--secondary);
+}
 
 
 
 
+.swiper{
+  margin-bottom: 50px;
+}
 
 /* Nastavení Swiper pro zobrazení pouze jednoho obrázku na střed, ale s náhledem dalších */
 .mySwiper {
