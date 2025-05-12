@@ -1,3 +1,14 @@
+import vituum from 'vituum'
+
 export default {
-  base: '/2024-p2b-web-projekt-TomasHejzlar/',
-};
+    plugins: [
+      vituum({
+        pages: {
+          normalizeBasePath: true
+        }, 
+        imports: {
+            paths: ['./src/styles/*/**', './src/scripts/*/**']
+        }
+      })
+    ],
+  }
