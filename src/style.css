@@ -274,19 +274,23 @@ h1 {
   }
 
   .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 900;
-  }
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 900;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
-  .overlay.active {
-    display: block;
-  }
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 }
 
 .swiper {
