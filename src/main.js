@@ -10,10 +10,10 @@ import 'swiper/css/pagination';
 
 document.addEventListener('DOMContentLoaded', () => {
   // LightGallery
-  const gallery = document.getElementById('gallery');
-  if (gallery) {
-    lightGallery(gallery, {
-      selector: 'a',
+  const galleryContainer = document.querySelector('.gallery');
+  if (galleryContainer) {
+    lightGallery(galleryContainer, {
+      selector: 'a', // všechny <a> tagy uvnitř .gallery
     });
   }
 
@@ -39,30 +39,28 @@ document.addEventListener('DOMContentLoaded', () => {
       toggleBtn.textContent = hiddenImages.classList.contains('visible') ? 'Skrýt' : 'Zobrazit více';
     });
   }
-});
 
-
-
-
-// Hamburger menu
+  // Hamburger menu
   const hamburger = document.getElementById("hamburger");
   const navbarMenu = document.getElementById("navbarMenu");
   const overlay = document.getElementById("overlay");
 
-  hamburger.addEventListener("click", () => {
-    navbarMenu.classList.toggle("open");
-    overlay.classList.toggle("active");
-  });
+  if (hamburger && navbarMenu && overlay) {
+    hamburger.addEventListener("click", () => {
+      navbarMenu.classList.toggle("open");
+      overlay.classList.toggle("active");
+    });
 
-  overlay.addEventListener("click", () => {
-    navbarMenu.classList.remove("open");
-    overlay.classList.remove("active");
-  });
-
-  document.querySelectorAll(".navbar-right a").forEach(link => {
-    link.addEventListener("click", () => {
+    overlay.addEventListener("click", () => {
       navbarMenu.classList.remove("open");
       overlay.classList.remove("active");
     });
-  });
 
+    document.querySelectorAll(".navbar-right a").forEach(link => {
+      link.addEventListener("click", () => {
+        navbarMenu.classList.remove("open");
+        overlay.classList.remove("active");
+      });
+    });
+  }
+});
