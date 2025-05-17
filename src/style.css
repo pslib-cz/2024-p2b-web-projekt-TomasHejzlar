@@ -177,12 +177,17 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9.375rem, 1fr));
   gap: 1rem;
-  max-width: 62.5rem;
+  
   margin-top: 1rem;
+  
 }
 
 
-
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 
 .hidden-images {
