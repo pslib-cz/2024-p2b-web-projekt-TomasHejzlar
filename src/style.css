@@ -8,7 +8,10 @@
 html {
   font-family: 'Poppins', sans-serif;
   font-size: 100%;
+  
 }
+
+
 
 .contact-info,
 .contact-form {
@@ -187,6 +190,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: auto;
+  /*align-items: center;*/
 }
 
 
@@ -330,4 +335,44 @@ h1 {
   height: auto;
   border-radius: 0.5rem;
   object-fit: cover;
+}
+
+a, button {
+  transition: all 0.3s ease;
+}
+
+.swiper-container {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.model-section {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.section-flex{
+  padding-top: 3em;
+}
+
+@media (min-width: 768px) {
+  .section-flex {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .section-flex .list {
+  flex: 1;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+  .section-flex .swiper {
+    flex: 2;
+  }
+
+
 }
