@@ -93,6 +93,12 @@ html {
   border-radius: 0.5rem;
 }
 
+.gallery .img-responsive:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+
+}
+
 .header {
   height: 12.5rem;
   background: linear-gradient(to bottom, var(--secondary), var(--primary));
